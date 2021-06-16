@@ -1,0 +1,16 @@
+News Website
+
+Dependencies: npm init, npm install axiox express ejs body-parser, npm install --save-dev nodemon
+
+Folders: 
+
+public: css, images, external js
+src: views->partials, routes
+
+Note: 
+ scss is used and to compile live saas compiler is used which compile it to css.
+ejs is like html and js is the functionality of news app.
+
+to start a server-- npm start
+
+/wp-json/wp/v2/posts

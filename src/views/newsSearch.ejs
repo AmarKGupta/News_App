@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">News App</div>
+        <div class="header__search">
+
+            <form action="/" method="POST">
+                <input type="text" name="search" placeholder="Search for news" required>
+                <input type="submit" value="search">
+            </form>
+
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="news">
+            <% if(articles !=null) { %>
+                <% articles.forEach(function(article,index) { %>
+                    <a href="<%- article.url %>" class="news__card">
+                        <img src="<%- article.urlToImage %>" alt="<%- article.title %>">
+                        <h2><%- article.title %></h2>
+                        <p><%- article.description %></p>
+                    </a>
+                <% }) %>
+            <% } else { %>
+                Error ! No Post Found
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
